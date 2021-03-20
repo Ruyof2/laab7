@@ -75,6 +75,9 @@ ggplot(Whickham, aes(x = age)) +
 ggplot(data=Whickham, aes(x=smoker, y=outcome, color=outcome)) + geom_bar(stat="identity")
 ```
 
+answer : If smokers continue to smoke, this will lead to their death .
+
+
 Knit, commit, and push to github.
 
 5. 
@@ -82,9 +85,14 @@ Knit, commit, and push to github.
 ```{r plot_smokeVSincome_2}
 Whickham %>%
   count(smoker, outcome)
-```
 502+230
  230/732
+```
+ 
+answer : smoker no (732) : 31,4 (dead)>> (76,2) alive    
+smoker yes (582) : 23,8 (dead)>> (76,2) alive
+Those who died and they are not smokers any more
+
 6.
 
 ```{r age_cat}
